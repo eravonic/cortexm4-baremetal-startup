@@ -28,9 +28,10 @@ debug: main.o startup.o prog.elf
 	$(OBJDUMP) main.o --section-headers > "debug/main_headers.txt"
 	$(OBJDUMP) startup.o --section-headers > "debug/startup_headers.txt"
 	
-# use special windows commands to clean object files
 clean: 
-	 -del -fR *.o	
+	# if on using CMD uncomment:
+	# -del -fR *.o	
+	rm -rf *.o
 	
 
 

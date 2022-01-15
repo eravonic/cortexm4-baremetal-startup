@@ -1,24 +1,55 @@
 #include <stdint.h>
 
-extern int main();
+/*
+ * The reset handler is the first executable code to run after
+ * startup. It is defined at the end of the file, and performs
+ * basic memory initialization, then calls the main() function.
+ */
 void reset_handler();
+
+/*
+ * main() is defined in main.c. This is analogous to main() in 
+ * a desktop C program, and is called/ran within the reset handler.
+ */
+extern int main();
+
+/*
+ * This is the default handler for all interrupts the processor
+ * may receive. See the implementation below for more explanation.
+ */
 void default_handler();
 
-extern uint32_t _stext;
-extern uint32_t _etext;
-extern uint32_t _sdata;
-extern uint32_t _edata;
-extern uint32_t _sbss;
-extern uint32_t _ebss;
+/*
+ * These variables are defined in the linker script (gcc_arm.ld).
+ * They are the addresses of code sections created once the final program
+ * is compiled, and are used by the reset handler below.
+ */
+extern uint32_t _etext;		// address of the end of .text section
+extern uint32_t _sdata;		// address of the start of .data section
+extern uint32_t _edata;		// address of the end of .data section
+extern uint32_t _sbss;		// address of the start of .bss section
+extern uint32_t _ebss;		// address of the end of .bss section
 
-
+/*
+ * Top of our stack. We tell the processor to start the stack at the 
+ * end of SRAM1 (which is 0x20017FFF), and the processor will automatically
+ * grow the stack downwards (towards 0x00000000).
+ */
 #define STACK_TOP	0x20017FFF
 
+/*
+ * Vector table. A vector is nothing more than the address of a function, and
+ * this table stores addresses to these functions such that when an interrupt
+ * occurs, the hardware itself looks at the function address associated within
+ * the interrupt and jumps to that code. Note that the attribute given to 
+ * this array places it into its own section, such that it can be placed it at 
+ * whichever address we want to in the linker script.
+ */
 uint32_t _vectors[] __attribute__ ((section(".vectors"))) = {
 	
 	// processor exceptions
-	(uint32_t)STACK_TOP,							 // stack top
-	(uint32_t)&reset_handler,						 // reset handler
+	(uint32_t)STACK_TOP,		   // 	stack top
+	(uint32_t)&reset_handler,	   // 	reset handler
     (uint32_t)&default_handler,    //	NMI_Handler
 	(uint32_t)&default_handler,    //	HardFault_Handler
 	(uint32_t)&default_handler,    //	MemManage_Handler
@@ -120,31 +151,55 @@ uint32_t _vectors[] __attribute__ ((section(".vectors"))) = {
 
 };
 
+/*
+ * Reset handler implementation, the first and only piece of code the hardware itself
+ * automatically calls on bootup.
+ */
 void reset_handler()
 {
-	// copy .data from flash to ram
-	uint32_t* psrc = &_etext;
-	uint32_t* pdest = &_sdata;
+	/*
+	 * We first want to copy the values in .data to RAM, as that
+	 * is where we told our code to look for them in the linker 
+	 * script. 
+	 */
+	uint32_t* psrc = &_etext;	// start at the end of .text, where .data is loaded in flash
+	uint32_t* pdest = &_sdata;	// copy to start of .data, where it is linked to in ram
 	
 	while (pdest < &_edata) {
+		// copy the value from flash to ram
 		*pdest = *psrc;
 		++psrc; 
 		++pdest;
 	}
 	
 	
-	// zero-out .bss section
-	pdest = &_sbss;
+	/*
+	 * Next set the values in the .bss section in ram to zeros. Some standard somewhere
+	 * guarantees this section to be zeros, thus we will oblige without confrontation.
+	 */
+	pdest = &_sbss;		// start at the beginning of .bss in ram
 	while (pdest < &_ebss)
 	{
+		// set each value to zero
 		*pdest = 0x0;
 		++pdest;
 	}
 	
-	// call main
+	/*
+	 * Finally, call main so we can run all our actual code. If we didn't
+	 * call main, because this is the only actual code the hardware itself 
+	 * calls, our program would just stop here.
+	 */
 	main();
 }
 
+/*
+ * Our default handler (the handler all interrupts run at this point) does
+ * nothing more than stall the processor in an infinite loop. If you are 
+ * looking to implement a specific interrupt, then create a new function and 
+ * point to it in the corresponding row in the vector table. However, the 
+ * processor will boot just fine as is.
+ */
 void default_handler()
 {
 	while(1) {
