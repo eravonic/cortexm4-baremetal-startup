@@ -1,0 +1,235 @@
+
+prog.elf:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <_vectors>:
+   0:	2006ffff 	strdcs	pc, [r6], -pc	; <UNPREDICTABLE>
+   4:	00000211 	andeq	r0, r0, r1, lsl r2
+   8:	00000279 	andeq	r0, r0, r9, ror r2
+   c:	00000279 	andeq	r0, r0, r9, ror r2
+  10:	00000279 	andeq	r0, r0, r9, ror r2
+  14:	00000279 	andeq	r0, r0, r9, ror r2
+  18:	00000279 	andeq	r0, r0, r9, ror r2
+	...
+  2c:	00000279 	andeq	r0, r0, r9, ror r2
+  30:	00000279 	andeq	r0, r0, r9, ror r2
+  34:	00000000 	andeq	r0, r0, r0
+  38:	00000279 	andeq	r0, r0, r9, ror r2
+  3c:	00000279 	andeq	r0, r0, r9, ror r2
+  40:	00000279 	andeq	r0, r0, r9, ror r2
+  44:	00000279 	andeq	r0, r0, r9, ror r2
+  48:	00000279 	andeq	r0, r0, r9, ror r2
+  4c:	00000279 	andeq	r0, r0, r9, ror r2
+  50:	00000279 	andeq	r0, r0, r9, ror r2
+  54:	00000279 	andeq	r0, r0, r9, ror r2
+  58:	00000279 	andeq	r0, r0, r9, ror r2
+  5c:	00000279 	andeq	r0, r0, r9, ror r2
+  60:	00000279 	andeq	r0, r0, r9, ror r2
+  64:	00000279 	andeq	r0, r0, r9, ror r2
+  68:	00000279 	andeq	r0, r0, r9, ror r2
+  6c:	00000279 	andeq	r0, r0, r9, ror r2
+  70:	00000279 	andeq	r0, r0, r9, ror r2
+  74:	00000279 	andeq	r0, r0, r9, ror r2
+  78:	00000279 	andeq	r0, r0, r9, ror r2
+  7c:	00000279 	andeq	r0, r0, r9, ror r2
+  80:	00000279 	andeq	r0, r0, r9, ror r2
+  84:	00000279 	andeq	r0, r0, r9, ror r2
+  88:	00000279 	andeq	r0, r0, r9, ror r2
+  8c:	00000279 	andeq	r0, r0, r9, ror r2
+  90:	00000279 	andeq	r0, r0, r9, ror r2
+  94:	00000279 	andeq	r0, r0, r9, ror r2
+  98:	00000279 	andeq	r0, r0, r9, ror r2
+  9c:	00000279 	andeq	r0, r0, r9, ror r2
+  a0:	00000279 	andeq	r0, r0, r9, ror r2
+  a4:	00000279 	andeq	r0, r0, r9, ror r2
+  a8:	00000279 	andeq	r0, r0, r9, ror r2
+  ac:	00000279 	andeq	r0, r0, r9, ror r2
+  b0:	00000279 	andeq	r0, r0, r9, ror r2
+  b4:	00000279 	andeq	r0, r0, r9, ror r2
+  b8:	00000279 	andeq	r0, r0, r9, ror r2
+  bc:	00000279 	andeq	r0, r0, r9, ror r2
+  c0:	00000279 	andeq	r0, r0, r9, ror r2
+  c4:	00000279 	andeq	r0, r0, r9, ror r2
+  c8:	00000279 	andeq	r0, r0, r9, ror r2
+  cc:	00000279 	andeq	r0, r0, r9, ror r2
+  d0:	00000279 	andeq	r0, r0, r9, ror r2
+  d4:	00000279 	andeq	r0, r0, r9, ror r2
+  d8:	00000279 	andeq	r0, r0, r9, ror r2
+  dc:	00000279 	andeq	r0, r0, r9, ror r2
+  e0:	00000279 	andeq	r0, r0, r9, ror r2
+  e4:	00000279 	andeq	r0, r0, r9, ror r2
+  e8:	00000279 	andeq	r0, r0, r9, ror r2
+  ec:	00000279 	andeq	r0, r0, r9, ror r2
+  f0:	00000279 	andeq	r0, r0, r9, ror r2
+  f4:	00000279 	andeq	r0, r0, r9, ror r2
+  f8:	00000279 	andeq	r0, r0, r9, ror r2
+  fc:	00000279 	andeq	r0, r0, r9, ror r2
+ 100:	00000279 	andeq	r0, r0, r9, ror r2
+ 104:	00000279 	andeq	r0, r0, r9, ror r2
+ 108:	00000279 	andeq	r0, r0, r9, ror r2
+ 10c:	00000279 	andeq	r0, r0, r9, ror r2
+ 110:	00000279 	andeq	r0, r0, r9, ror r2
+ 114:	00000279 	andeq	r0, r0, r9, ror r2
+ 118:	00000279 	andeq	r0, r0, r9, ror r2
+ 11c:	00000279 	andeq	r0, r0, r9, ror r2
+ 120:	00000279 	andeq	r0, r0, r9, ror r2
+ 124:	00000279 	andeq	r0, r0, r9, ror r2
+ 128:	00000279 	andeq	r0, r0, r9, ror r2
+ 12c:	00000279 	andeq	r0, r0, r9, ror r2
+ 130:	00000279 	andeq	r0, r0, r9, ror r2
+ 134:	00000279 	andeq	r0, r0, r9, ror r2
+ 138:	00000279 	andeq	r0, r0, r9, ror r2
+ 13c:	00000279 	andeq	r0, r0, r9, ror r2
+ 140:	00000279 	andeq	r0, r0, r9, ror r2
+ 144:	00000279 	andeq	r0, r0, r9, ror r2
+ 148:	00000279 	andeq	r0, r0, r9, ror r2
+ 14c:	00000279 	andeq	r0, r0, r9, ror r2
+	...
+ 158:	00000279 	andeq	r0, r0, r9, ror r2
+ 15c:	00000279 	andeq	r0, r0, r9, ror r2
+ 160:	00000279 	andeq	r0, r0, r9, ror r2
+ 164:	00000279 	andeq	r0, r0, r9, ror r2
+ 168:	00000000 	andeq	r0, r0, r0
+ 16c:	00000279 	andeq	r0, r0, r9, ror r2
+ 170:	00000279 	andeq	r0, r0, r9, ror r2
+ 174:	00000279 	andeq	r0, r0, r9, ror r2
+ 178:	00000279 	andeq	r0, r0, r9, ror r2
+ 17c:	00000279 	andeq	r0, r0, r9, ror r2
+ 180:	00000279 	andeq	r0, r0, r9, ror r2
+ 184:	00000279 	andeq	r0, r0, r9, ror r2
+ 188:	00000279 	andeq	r0, r0, r9, ror r2
+ 18c:	00000279 	andeq	r0, r0, r9, ror r2
+ 190:	00000279 	andeq	r0, r0, r9, ror r2
+ 194:	00000279 	andeq	r0, r0, r9, ror r2
+ 198:	00000279 	andeq	r0, r0, r9, ror r2
+ 19c:	00000279 	andeq	r0, r0, r9, ror r2
+ 1a0:	00000279 	andeq	r0, r0, r9, ror r2
+ 1a4:	00000279 	andeq	r0, r0, r9, ror r2
+ 1a8:	00000279 	andeq	r0, r0, r9, ror r2
+ 1ac:	00000279 	andeq	r0, r0, r9, ror r2
+ 1b0:	00000279 	andeq	r0, r0, r9, ror r2
+ 1b4:	00000279 	andeq	r0, r0, r9, ror r2
+ 1b8:	00000279 	andeq	r0, r0, r9, ror r2
+ 1bc:	00000279 	andeq	r0, r0, r9, ror r2
+ 1c0:	00000279 	andeq	r0, r0, r9, ror r2
+ 1c4:	00000279 	andeq	r0, r0, r9, ror r2
+ 1c8:	00000279 	andeq	r0, r0, r9, ror r2
+ 1cc:	00000279 	andeq	r0, r0, r9, ror r2
+ 1d0:	00000279 	andeq	r0, r0, r9, ror r2
+ 1d4:	00000279 	andeq	r0, r0, r9, ror r2
+ 1d8:	00000279 	andeq	r0, r0, r9, ror r2
+ 1dc:	00000279 	andeq	r0, r0, r9, ror r2
+ 1e0:	00000279 	andeq	r0, r0, r9, ror r2
+ 1e4:	00000279 	andeq	r0, r0, r9, ror r2
+ 1e8:	00000279 	andeq	r0, r0, r9, ror r2
+ 1ec:	00000279 	andeq	r0, r0, r9, ror r2
+ 1f0:	00000279 	andeq	r0, r0, r9, ror r2
+ 1f4:	00000279 	andeq	r0, r0, r9, ror r2
+ 1f8:	00000279 	andeq	r0, r0, r9, ror r2
+ 1fc:	00000279 	andeq	r0, r0, r9, ror r2
+
+00000200 <main>:
+ 200:	b480      	push	{r7}
+ 202:	af00      	add	r7, sp, #0
+ 204:	2300      	movs	r3, #0
+ 206:	4618      	mov	r0, r3
+ 208:	46bd      	mov	sp, r7
+ 20a:	bc80      	pop	{r7}
+ 20c:	4770      	bx	lr
+	...
+
+00000210 <reset_handler>:
+ 210:	b580      	push	{r7, lr}
+ 212:	b082      	sub	sp, #8
+ 214:	af00      	add	r7, sp, #0
+ 216:	4b13      	ldr	r3, [pc, #76]	; (264 <reset_handler+0x54>)
+ 218:	607b      	str	r3, [r7, #4]
+ 21a:	4b13      	ldr	r3, [pc, #76]	; (268 <reset_handler+0x58>)
+ 21c:	603b      	str	r3, [r7, #0]
+ 21e:	e009      	b.n	234 <reset_handler+0x24>
+ 220:	687b      	ldr	r3, [r7, #4]
+ 222:	681a      	ldr	r2, [r3, #0]
+ 224:	683b      	ldr	r3, [r7, #0]
+ 226:	601a      	str	r2, [r3, #0]
+ 228:	687b      	ldr	r3, [r7, #4]
+ 22a:	3304      	adds	r3, #4
+ 22c:	607b      	str	r3, [r7, #4]
+ 22e:	683b      	ldr	r3, [r7, #0]
+ 230:	3304      	adds	r3, #4
+ 232:	603b      	str	r3, [r7, #0]
+ 234:	683b      	ldr	r3, [r7, #0]
+ 236:	4a0d      	ldr	r2, [pc, #52]	; (26c <reset_handler+0x5c>)
+ 238:	4293      	cmp	r3, r2
+ 23a:	d3f1      	bcc.n	220 <reset_handler+0x10>
+ 23c:	4b0c      	ldr	r3, [pc, #48]	; (270 <reset_handler+0x60>)
+ 23e:	603b      	str	r3, [r7, #0]
+ 240:	e005      	b.n	24e <reset_handler+0x3e>
+ 242:	683b      	ldr	r3, [r7, #0]
+ 244:	2200      	movs	r2, #0
+ 246:	601a      	str	r2, [r3, #0]
+ 248:	683b      	ldr	r3, [r7, #0]
+ 24a:	3304      	adds	r3, #4
+ 24c:	603b      	str	r3, [r7, #0]
+ 24e:	683b      	ldr	r3, [r7, #0]
+ 250:	4a08      	ldr	r2, [pc, #32]	; (274 <reset_handler+0x64>)
+ 252:	4293      	cmp	r3, r2
+ 254:	d3f5      	bcc.n	242 <reset_handler+0x32>
+ 256:	f7ff ffd3 	bl	200 <main>
+ 25a:	bf00      	nop
+ 25c:	3708      	adds	r7, #8
+ 25e:	46bd      	mov	sp, r7
+ 260:	bd80      	pop	{r7, pc}
+ 262:	bf00      	nop
+ 264:	00000280 	andeq	r0, r0, r0, lsl #5
+ 268:	20000000 	andcs	r0, r0, r0
+ 26c:	20000000 	andcs	r0, r0, r0
+ 270:	20000000 	andcs	r0, r0, r0
+ 274:	20000000 	andcs	r0, r0, r0
+
+00000278 <default_handler>:
+ 278:	b480      	push	{r7}
+ 27a:	af00      	add	r7, sp, #0
+ 27c:	e7fe      	b.n	27c <default_handler+0x4>
+ 27e:	bf00      	nop
+
+Disassembly of section .comment:
+
+00000000 <.comment>:
+   0:	3a434347 	bcc	10d0d24 <_etext+0x10d0aa4>
+   4:	4e472820 	cdpmi	8, 4, cr2, cr7, cr0, {1}
+   8:	72412055 	subvc	r2, r1, #85	; 0x55
+   c:	6d45206d 	stclvs	0, cr2, [r5, #-436]	; 0xfffffe4c
+  10:	64646562 	strbtvs	r6, [r4], #-1378	; 0xfffffa9e
+  14:	54206465 	strtpl	r6, [r0], #-1125	; 0xfffffb9b
+  18:	636c6f6f 	cmnvs	ip, #444	; 0x1bc
+  1c:	6e696168 	powvsez	f6, f1, #0.0
+  20:	2e303120 	rsfcssp	f3, f0, f0
+  24:	30322d33 	eorscc	r2, r2, r3, lsr sp
+  28:	312e3132 			; <UNDEFINED> instruction: 0x312e3132
+  2c:	31202930 			; <UNDEFINED> instruction: 0x31202930
+  30:	2e332e30 	mrccs	14, 1, r2, cr3, cr0, {1}
+  34:	30322031 	eorscc	r2, r2, r1, lsr r0
+  38:	38303132 	ldmdacc	r0!, {r1, r4, r5, r8, ip, sp}
+  3c:	28203432 	stmdacs	r0!, {r1, r4, r5, sl, ip, sp}
+  40:	656c6572 	strbvs	r6, [ip, #-1394]!	; 0xfffffa8e
+  44:	29657361 	stmdbcs	r5!, {r0, r5, r6, r8, r9, ip, sp, lr}^
+	...
+
+Disassembly of section .ARM.attributes:
+
+00000000 <.ARM.attributes>:
+   0:	00002d41 	andeq	r2, r0, r1, asr #26
+   4:	61656100 	cmnvs	r5, r0, lsl #2
+   8:	01006962 	tsteq	r0, r2, ror #18
+   c:	00000023 	andeq	r0, r0, r3, lsr #32
+  10:	2d453705 	stclcs	7, cr3, [r5, #-20]	; 0xffffffec
+  14:	0d06004d 	stceq	0, cr0, [r6, #-308]	; 0xfffffecc
+  18:	02094d07 	andeq	r4, r9, #448	; 0x1c0
+  1c:	01140412 	tsteq	r4, r2, lsl r4
+  20:	03170115 	tsteq	r7, #1073741829	; 0x40000005
+  24:	01190118 	tsteq	r9, r8, lsl r1
+  28:	061e011a 			; <UNDEFINED> instruction: 0x061e011a
+  2c:	Address 0x0000002c is out of bounds.
+

@@ -1,0 +1,11 @@
+
+prog.elf:     file format elf32-littlearm
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000280  00000000  00000000  00010000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .comment      00000049  00000000  00000000  00010280  2**0
+                  CONTENTS, READONLY
+  2 .ARM.attributes 0000002e  00000000  00000000  000102c9  2**0
+                  CONTENTS, READONLY
