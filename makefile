@@ -11,10 +11,10 @@ LD_FLAGS = -T$(LINKER_SCRIPT) -nostartfiles --specs=nosys.specs -fdiagnostics-co
 all: prog.elf prog.bin debug clean
 
 prog.bin: prog.elf
-	$(OBJCOPY) -O binary $< $@
+	$(OBJCOPY) -O binary "output/$<" "output/$@"
 
 prog.elf: main.o startup.o
-	$(LD) $^ $(LD_FLAGS) -o $@
+	$(LD) $^ $(LD_FLAGS) -o "output/$@"
 	
 main.o:
 startup.o:
@@ -23,8 +23,8 @@ startup.o:
 	$(CC) $< $(CC_FLAGS) -o $@ 
 	
 debug: main.o startup.o prog.elf
-	$(OBJDUMP) prog.elf --section-headers > "debug/prog_headers.txt"
-	$(OBJDUMP) prog.elf --disassemble-all > "debug/prog_disassembly.txt"
+	$(OBJDUMP) "output/prog.elf" --section-headers > "debug/prog_headers.txt"
+	$(OBJDUMP) "output/prog.elf" --disassemble-all > "debug/prog_disassembly.txt"
 	$(OBJDUMP) main.o --section-headers > "debug/main_headers.txt"
 	$(OBJDUMP) startup.o --section-headers > "debug/startup_headers.txt"
 	

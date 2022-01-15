@@ -1,5 +1,5 @@
 
-prog.elf:     file format elf32-littlearm
+output/prog.elf:     file format elf32-littlearm
 
 
 Disassembly of section .text:
