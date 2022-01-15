@@ -1,8 +1,8 @@
 MEMORY
 {
 	FLASH (rx) : ORIGIN = 0x00000000, LENGTH = 0x000FFFFF
-	RAM (rwx) : ORIGIN = 0x20000000, LENGTH = 0x0006FFFF
-}
+	RAM (rwx) : ORIGIN = 0x20000000, LENGTH =  0x00017FFF
+} 
 
 _ram_start = ORIGIN(RAM);
 
@@ -13,7 +13,7 @@ SECTIONS
 		*(.vectors)
 		*(.text)
 		_etext = .;
-	} > flash
+	} > FLASH
 	
 	
 	.data : AT (_etext)
@@ -29,5 +29,4 @@ SECTIONS
 		*(.bss)
 		_ebss = .;
 	} > RAM
-	
 }

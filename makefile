@@ -4,7 +4,7 @@ LD = $(CC)
 OBJCOPY = $(TOOLCHAIN)objcopy
 OBJDUMP = $(TOOLCHAIN)objdump
 
-CC_FLAGS = -c -mthumb -mcpu=cortex-m4 -fdiagnostics-color=never
+CC_FLAGS = -c -mthumb -mcpu=cortex-m4 -fdiagnostics-color=never -O0
 LINKER_SCRIPT = arm_gcc.ld
 LD_FLAGS = -T$(LINKER_SCRIPT) -nostartfiles --specs=nosys.specs -fdiagnostics-color=never 
 

@@ -9,9 +9,9 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, DATA
   2 .bss          00000000  00000000  00000000  000000a4  2**0
                   ALLOC
-  3 .vectors      00000200  00000000  00000000  000000a4  2**2
+  3 .vectors      00000188  00000000  00000000  000000a4  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, DATA
-  4 .comment      0000004a  00000000  00000000  000002a4  2**0
+  4 .comment      0000004a  00000000  00000000  0000022c  2**0
                   CONTENTS, READONLY
-  5 .ARM.attributes 0000002e  00000000  00000000  000002ee  2**0
+  5 .ARM.attributes 0000002e  00000000  00000000  00000276  2**0
                   CONTENTS, READONLY
